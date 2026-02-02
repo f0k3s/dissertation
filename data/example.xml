@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+
+<ids:info>
+        <ids:title>Бетонный пример ФБС</ids:title>
+        <ids:description> Information requirements for FBS foundation blocks according to GOST 13579</ids:description>
+</ids:info>
+
+<ids:specifications>
+    <ids:specification name="ConcrBlock FBS" ifcVersion="IFC4" >
+
+        <!-- Тип IFC -->
+        <ids:applicability minOccurs="1">
+            <ids:entity>
+                <ids:name>
+                    <ids:simpleValue>
+                        IFCBUILDINGELEMENTPROXY
+                    </ids:simpleValue>
+                </ids:name>
+            </ids:entity>
+            
+            <!-- Классификация: ФБС -->
+            <ids:classification>
+
+                <ids:value>
+                    <ids:simpleValue>
+                        FBS
+                    </ids:simpleValue>
+                </ids:value>
+
+                <ids:system>
+                    <ids:simpleValue>FBS</ids:simpleValue>
+                </ids:system>
+
+            </ids:classification>
+        </ids:applicability>
+
+        <!--Требования -->
+        <ids:requirements>
+
+            <!-- Материал: тяжелый бетон -->
+            <ids:material cardinality="required">
+                <ids:value>
+                    <ids:simpleValue>
+                        HeavyConcrete
+                    </ids:simpleValue>
+                </ids:value>
+            </ids:material>
+            
+            <!-- Класс бетона по ГОСТ 13579 -->
+            <ids:property>
+                <ids:propertySet>
+                    <ids:simpleValue>
+                        Pset_ConcreteElementGeneral
+                    </ids:simpleValue>
+                </ids:propertySet>
+
+                <ids:baseName>
+                    <ids:simpleValue>
+                        ConcreteStrengthClass
+                    </ids:simpleValue>
+                </ids:baseName>
+
+                <ids:value>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="B7.5"></xs:enumeration>
+                        <xs:enumeration value="B12.5"></xs:enumeration>
+                        <xs:enumeration value="B15"></xs:enumeration>
+                    </xs:restriction>
+                </ids:value>
+
+            </ids:property>
+
+        </ids:requirements>
+
+    </ids:specification>
+
+</ids:specifications>
+
+</ids:ids>
