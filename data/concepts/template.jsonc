@@ -1,0 +1,45 @@
+{
+    "@context":{
+        "ex":"https://example.org/ontology/",//path to ontology
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    
+    "@id": "https://corp.example.org/concepts/#ID/#VERSION",
+    "@type": "#TYPE",
+
+    "ex:uid": "#UID",
+    "ex:version": "#VERSION",
+    "ex:status": "#STATUS", //  relevant/outdated
+
+    "rdfs:label": "#NAME",
+
+    "rdfs:comment": "#DESCRIPTION",
+
+    "rdfs:subClassOf": {
+        "@id": "https://corp.example.org/concepts/#PARENTID"
+    },
+
+    "ex:classification": {
+        "@type": "ex:ClassificationCode",
+        "ex:system": "KSI",
+        "ex:table": "#TABLE",
+        "ex:code": "#ID"
+    },
+
+    "ex:externalLinks": [
+            {
+                "ex:system": "",
+                "ex:code": ""
+            }
+        ],
+
+    "ex:source": [
+        {
+        "@type": "ex:RegulatoryDocument",
+        "ex:title": "#TITLE",
+        "ex:date": "#DATE", //format yyyy-mm-dd
+        "ex:number": "#NUMBER"
+        }
+    ]
+}
