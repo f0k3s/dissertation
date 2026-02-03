@@ -5,32 +5,32 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     
-    "@id": "https://corp.example.org/concepts/AAA/1.0.0",
+    "@id": "https://corp.example.org/concepts/AAAD030/1.0.0",
     "@type": "ex:ConstructionConcept",
 
-    "ex:uid": "AAA",
+    "ex:uid": "AAAD030",
     "ex:version": "1.0.0",
-    "ex:status": "relevant", 
+    "ex:status": "outdated",
 
-    "rdfs:label": "Блок бетонный для стен подвалов",
+    "rdfs:label": "Блок бетонный для стен подвала пустотный (с открытыми вниз пустотами) ФБП",
 
-    "rdfs:comment": "Бетонный блок, применяемый для устройства стен подвала или технического подполья здания",
+    "rdfs:comment": "None",
 
     "rdfs:subClassOf": {
-        "@id": "https://corp.example.org/concepts/AA/1.0.0"
+        "@id": "https://corp.example.org/concepts/AAAD"
     },
 
     "ex:classification": {
         "@type": "ex:ClassificationCode",
         "ex:system": "KSI",
         "ex:table": "СтИ _ CPr",
-        "ex:code": "AA"
+        "ex:code": "AAAD030"
     },
 
     "ex:externalLinks": [
         {
             "ex:system": "КСР",
-            "ex:code": "05.02.01"
+            "ex:code": "Группа 05.2.02.01"
         }
     ],
 
@@ -43,7 +43,9 @@
         },
         {
             "@type": "ex:RegulatoryDocument",
-            "ex:title": "ГОСТ 13579-2018"
+            "ex:title": "Приказ Москомэкспертизы",
+            "ex:date": "2022-12-28",
+            "ex:number": "МКЭ-ОД/22-128"
         }
     ]
 }

@@ -5,16 +5,16 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     
-    "@id": "https://corp.example.org/concepts/AAA/1.0.0",
+    "@id": "https://corp.example.org/concepts/AAB/1.0.0",
     "@type": "ex:ConstructionConcept",
 
-    "ex:uid": "AAA",
+    "ex:uid": "AAB",
     "ex:version": "1.0.0",
     "ex:status": "relevant", 
 
-    "rdfs:label": "Блок бетонный для стен подвалов",
+    "rdfs:label": "Элементы свайных фундаментов",
 
-    "rdfs:comment": "Бетонный блок, применяемый для устройства стен подвала или технического подполья здания",
+    "rdfs:comment": "Элементы фундамента, в котором используются сваи",
 
     "rdfs:subClassOf": {
         "@id": "https://corp.example.org/concepts/AA/1.0.0"
@@ -24,26 +24,20 @@
         "@type": "ex:ClassificationCode",
         "ex:system": "KSI",
         "ex:table": "СтИ _ CPr",
-        "ex:code": "AA"
+        "ex:code": "AAB"
     },
 
     "ex:externalLinks": [
         {
             "ex:system": "КСР",
-            "ex:code": "05.02.01"
+            "ex:code": "05.01.05"
         }
     ],
 
     "ex:source": [
         {
             "@type": "ex:RegulatoryDocument",
-            "ex:title": "Приказ Минстроя России",
-            "ex:date": "2022-11-17",
-            "ex:number": "969/пр"
-        },
-        {
-            "@type": "ex:RegulatoryDocument",
-            "ex:title": "ГОСТ 13579-2018"
+            "ex:title": "ГОСТ 6707-1-2020"
         }
     ]
 }

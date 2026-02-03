@@ -5,10 +5,10 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     
-    "@id": "https://corp.example.org/concepts/AAA/1.0.0",
-    "@type": "#TYPE",
+    "@id": "https://corp.example.org/concepts/AAAD/1.0.0",
+    "@type": "ex:ConstructionConcept",
 
-    "ex:uid": "AAA",
+    "ex:uid": "AAAD",
     "ex:version": "1.0.0",
     "ex:status": "relevant", 
 
@@ -17,7 +17,7 @@
     "rdfs:comment": "",
 
     "rdfs:subClassOf": {
-        "@id": "https://corp.example.org/concepts/AA/1.0.0"
+        "@id": "https://corp.example.org/concepts/AAA/1.0.0"
     },
 
     "ex:classification": {
