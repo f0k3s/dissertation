@@ -1,0 +1,51 @@
+{
+    "@context":{
+        "ex":"https://example.org/ontology/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    
+    "@id": "https://corp.example.org/concepts/AAAD030/1.0.0",
+    "@type": "ex:ConstructionConcept",
+
+    "ex:uid": "AAAD030",
+    "ex:version": "1.0.0",
+    "ex:status": "outdated",
+
+    "rdfs:label": "Блок бетонный для стен подвала пустотный (с открытыми вниз пустотами) ФБП",
+
+    "rdfs:comment": "None",
+
+    "rdfs:subClassOf": {
+        "@id": "https://corp.example.org/concepts/AAAD"
+    },
+
+    "ex:classification": {
+        "@type": "ex:ClassificationCode",
+        "ex:system": "KSI",
+        "ex:table": "СтИ _ CPr",
+        "ex:code": "AAAD030"
+    },
+
+    "ex:externalLinks": [
+        {
+            "ex:system": "КСР",
+            "ex:code": "Группа 05.2.02.01"
+        }
+    ],
+
+    "ex:source": [
+        {
+            "@type": "ex:RegulatoryDocument",
+            "ex:title": "Приказ Минстроя России",
+            "ex:date": "2022-11-17",
+            "ex:number": "969/пр"
+        },
+        {
+            "@type": "ex:RegulatoryDocument",
+            "ex:title": "Приказ Москомэкспертизы",
+            "ex:date": "2022-12-28",
+            "ex:number": "МКЭ-ОД/22-128"
+        }
+    ]
+}

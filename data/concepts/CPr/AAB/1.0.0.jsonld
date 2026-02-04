@@ -1,0 +1,43 @@
+{
+    "@context":{
+        "ex":"https://example.org/ontology/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    
+    "@id": "https://corp.example.org/concepts/AAB/1.0.0",
+    "@type": "ex:ConstructionConcept",
+
+    "ex:uid": "AAB",
+    "ex:version": "1.0.0",
+    "ex:status": "relevant", 
+
+    "rdfs:label": "Элементы свайных фундаментов",
+
+    "rdfs:comment": "Элементы фундамента, в котором используются сваи",
+
+    "rdfs:subClassOf": {
+        "@id": "https://corp.example.org/concepts/AA/1.0.0"
+    },
+
+    "ex:classification": {
+        "@type": "ex:ClassificationCode",
+        "ex:system": "KSI",
+        "ex:table": "СтИ _ CPr",
+        "ex:code": "AAB"
+    },
+
+    "ex:externalLinks": [
+        {
+            "ex:system": "КСР",
+            "ex:code": "05.01.05"
+        }
+    ],
+
+    "ex:source": [
+        {
+            "@type": "ex:RegulatoryDocument",
+            "ex:title": "ГОСТ 6707-1-2020"
+        }
+    ]
+}
