@@ -2,28 +2,36 @@
     "@context":{
         "ex":"https://example.org/ontology/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+
+        "cpr": "https://corp.example.org/concepts/CPr/",
+        "cma": "https://corp.example.org/concepts/CMa/",
+        "prp": "https://corp.example.org/concepts/Prp/"
     },
     
-    "@id": "https://corp.example.org/concepts/AAAD010/1.0.0",
-    "@type": "ex:ConstructionConcept",
+    "@id": "cpr:AAAD010/1.0.0",
+    "@type": [  "ex:ConstructionConcept", 
+                "ex:ConstructionProduct"
+                ],
 
-    "ex:uid": "AAAD010",
+    "skos:notation": "AAAD010",
     "ex:version": "1.0.0",
     "ex:status": "relevant",
 
-    "rdfs:label": "Блок бетонный для стен подвала сплошной ФБС",
+    "skos:prefLabel": "Блок бетонный для стен подвала сплошной ФБС",
 
     "rdfs:comment": "None",
 
     "rdfs:subClassOf": {
-        "@id": "https://corp.example.org/concepts/AAAD"
+        "@id": "cpr:AAAD"
     },
 
     "ex:classification": {
         "@type": "ex:ClassificationCode",
         "ex:system": "KSI",
         "ex:table": "СтИ _ CPr",
+        "ex:tableCode": 16,
         "ex:code": "AAAD010"
     },
 
