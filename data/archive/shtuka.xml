@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<objectFacet facet_name="Строительные изделия" facet_id="СтИ">
+
+
+<object id="AAA"> //id должен задаваться в приложухе при добавлении в базу или используем коды из КСИ
+    
+    <description> None </description>
+
+    <class masterlevel="A" subclassl1="AA" subclassl2="None" subclassl3="None" subclassl4="None" subclassl5="None">    //берется из КСИ
+        <code>AAA</code>        //начало кода наследуется из кода последнего подкласса
+    </class>
+
+    <properties>
+        <name>Элементы ленточных и столбчатых фундаментов</name>
+        <KSItable>СтИ _ CPr</KSItable>
+    </properties>
+
+    <keywords></keywords>
+
+    <links>КСР_:    Группа 05.1.05.04, МССК: ЭЛ 10 10 15, МССК: ЭЛ 10 10 20, </links>
+    <source>Приказ Москомэкспертизы от 28.12.2022 N МКЭ-ОД/22-128</source>
+
+</object>
+
+
+
+<object id="AAAD"> //id должен задаваться в приложухе при добавлении в базу или используем коды из КСИ
+    
+    <description> Бетонный блок, применяемый для устройства стен подвала или технического подполья здания </description>
+
+    <class masterlevel="A" subclassl1="AA" subclassl2="AAA" subclassl3="None" subclassl4="None" subclassl5="None">    //берется из КСИ
+        <code>AAAD</code>        //начало кода наследуется из кода последнего подкласса
+    </class>
+
+    <properties>
+        <name>Блок бетонный для стен подвалов</name>
+        <KSItable >СтИ _ CPr</KSItable>
+    </properties>
+
+    <keywords >None</keywords>
+
+    <links >КСР: 05.2.02.01, </links>
+    <source >13579-2018, Приказ Минстроя России от 17.11.2022 N969/пр</source>
+
+</object>
+
+
+
+<object id="AAAD010"> //id должен задаваться в приложухе при добавлении в базу или используем коды из КСИ
+    
+    <description> какое-то описание этого непотребства</description>
+
+    <class masterlevel="A" subclassl1="AA" subclassl2="AAA" subclassl3="AAAD" subclassl4="None" subclassl5="None">    //берется из КСИ
+        <code >AAAD010></code>        //начало кода наследуется из кода последнего подкласса
+    </class>
+
+    <properties>
+        <name >Блок бетонный для стен подвала сплошной ФБС</name>
+        <KSItable >СтИ _ CPr</KSItable>
+    </properties>
+
+    <keywords></keywords>
+
+    <links >КСР_:    Группа 05.2.02.01, </links>
+    <source >Приказ Минстроя России от 17.11.2022 N969/пр</source>
+
+</object>
+
+</objectFacet>

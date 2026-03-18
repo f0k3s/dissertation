@@ -1,0 +1,19 @@
+<object id="None"> //id должен задаваться в приложухе при добавлении в базу или используем коды из КСИ
+    
+    <description> None </description>
+
+    <class masterlevel="None" subclassl1="None" subclassl2="None" subclassl3="None" subclassl4="None" subclassl5="None">    //берется из КСИ
+        <code ></code>        //начало кода наследуется из кода последнего подкласса
+    </class>
+
+    <properties>
+        <name ></name>
+        <KSItable ></KSItable>
+    </properties>
+
+    <keywords ></keywords>
+
+    <links ></links>
+    <source ></source>
+
+</object>
