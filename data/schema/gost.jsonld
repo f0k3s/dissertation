@@ -1,0 +1,159 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+
+    "name": "rdfs:label",
+
+    "isA": { "@type": "@id" },
+    "hasType": { "@type": "@id" },
+    "madeOf": { "@type": "@id" },
+    "conformsTo": { "@type": "@id" },
+    "testedBy": { "@type": "@id" }
+  },
+
+  "id": "doc:gost_13579_2018",
+  "type": "Document",
+
+  "meta": {
+    "title": "ГОСТ 13579-2018 Блоки бетонные для стен подвалов",
+    "version": "1.0.0",
+    "created": "2026-03-18",
+    "author": "internal-platform",
+    "status": "approved"
+  },
+
+  "entities": [
+
+    {
+      "id": "class:building_element",
+      "type": "Class",
+      "name": "Строительный элемент"
+    },
+
+    {
+      "id": "class:foundation_block",
+      "type": "Class",
+      "name": "Фундаментный блок",
+      "relations": [
+        { "type": "isA", "ref": "class:building_element" }
+      ]
+    },
+
+    {
+      "id": "type:FBS",
+      "type": "BlockType",
+      "name": "Сплошной блок",
+      "relations": [
+        { "type": "isA", "ref": "class:foundation_block" }
+      ]
+    },
+
+    {
+      "id": "type:FBV",
+      "type": "BlockType",
+      "name": "Блок с вырезом",
+      "relations": [
+        { "type": "isA", "ref": "class:foundation_block" }
+      ]
+    },
+
+    {
+      "id": "type:FBP",
+      "type": "BlockType",
+      "name": "Пустотелый блок",
+      "relations": [
+        { "type": "isA", "ref": "class:foundation_block" }
+      ]
+    },
+
+    {
+      "id": "material:heavy_concrete_T",
+      "type": "Material",
+      "name": "Тяжелый бетон",
+      "properties": [
+        { "type": "density", "value": 2400, "unit": "kg/m3" },
+        { "type": "strengthClass", "value": "B15" },
+        { "type": "frostResistance", "value": "F50" }
+      ],
+      "relations": [
+        { "type": "testedBy", "ref": "doc:gost_10180" }
+      ]
+    },
+
+    {
+      "id": "material:silicate_concrete",
+      "type": "Material",
+      "name": "Силикатный бетон",
+      "properties": [
+        { "type": "density", "value": 1800, "unit": "kg/m3" }
+      ]
+    },
+
+    {
+      "id": "block:FBS_24_4_6_T",
+      "type": "Block",
+      "name": "ФБС 24.4.6-Т",
+      "relations": [
+        { "type": "hasType", "ref": "type:FBS" },
+        { "type": "madeOf", "ref": "material:heavy_concrete_T" },
+        { "type": "conformsTo", "ref": "doc:gost_13579_2018" }
+      ],
+      "properties": [
+        { "type": "length", "value": 2380, "unit": "mm" },
+        { "type": "width", "value": 400, "unit": "mm" },
+        { "type": "height", "value": 580, "unit": "mm" }
+      ],
+      "mark": {
+        "raw": "ФБС 24.4.6-Т"
+        }
+      },
+
+    {
+      "id": "block:FBV_9_4_6_T",
+      "type": "Block",
+      "name": "ФБВ 9.4.6-Т",
+      "relations": [
+        { "type": "hasType", "ref": "type:FBV" },
+        { "type": "madeOf", "ref": "material:heavy_concrete_T" },
+        { "type": "conformsTo", "ref": "doc:gost_13579_2018" }
+      ],
+      "properties": [
+        { "type": "length", "value": 880, "unit": "mm" },
+        { "type": "width", "value": 400, "unit": "mm" },
+        { "type": "height", "value": 580, "unit": "mm" },
+        { "type": "hasCutout", "value": true }
+      ],
+      "mark": {
+        "raw": "ФБВ 9.4.6-Т"
+      }
+    },
+
+    {
+      "id": "block:FBP_12_5_6_C",
+      "type": "Block",
+      "name": "ФБП 12.5.6-С",
+      "relations": [
+        { "type": "hasType", "ref": "type:FBP" },
+        { "type": "madeOf", "ref": "material:silicate_concrete" },
+        { "type": "conformsTo", "ref": "doc:gost_13579_2018" }
+      ],
+      "properties": [
+        { "type": "length", "value": 1180, "unit": "mm" },
+        { "type": "width", "value": 500, "unit": "mm" },
+        { "type": "height", "value": 580, "unit": "mm" },
+        { "type": "voidRatio", "value": 0.3 }
+      ],
+      "mark": {
+        "raw": "ФБП 12.5.6-С"
+      }
+    },
+
+    {
+      "id": "doc:gost_10180",
+      "type": "Document",
+      "name": "Методы определения прочности бетона"
+    }
+
+  ]
+}

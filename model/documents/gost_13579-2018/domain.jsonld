@@ -1,0 +1,176 @@
+{
+  "@context": "core.jsonld",
+  "@graph": [
+    {
+      "id": "mat:concrete",
+      "type": "ns:MaterialClass",
+      "label": "Бетон"
+    },
+    {
+      "id": "mat:heavy_concrete",
+      "type": "ns:MaterialClass",
+      "subClassOf": "mat:concrete",
+      "label": "Тяжелый бетон"
+    },
+    {
+      "id": "mat:lightweight_concrete",
+      "type": "ns:MaterialClass",
+      "subClassOf": "mat:concrete",
+      "label": "Легкий бетон"
+    },
+    {
+      "id": "mat:dense_silicate_concrete",
+      "type": "ns:MaterialClass",
+      "subClassOf": "mat:concrete",
+      "label": "Плотный силикатный бетон"
+    },
+    {
+      "id": "obj:block",
+      "type": "ns:ObjectClass",
+      "label": "Блок"
+    },
+    {
+      "id": "obj:concrete_block",
+      "type": "ns:ObjectClass",
+      "subClassOf": "obj:block",
+      "label": "Бетонный блок"
+    },
+    {
+      "id": "obj:basement_wall_block",
+      "type": "ns:ObjectClass",
+      "subClassOf": "obj:concrete_block",
+      "label": "Блок для стен подвалов"
+    },
+    {
+      "id": "obj:fbs_block",
+      "type": "ns:ObjectClass",
+      "subClassOf": "obj:basement_wall_block",
+      "label": "Блок типа ФБС"
+    },
+    {
+      "id": "obj:fbv_block",
+      "type": "ns:ObjectClass",
+      "subClassOf": "obj:basement_wall_block",
+      "label": "Блок типа ФБВ"
+    },
+    {
+      "id": "obj:fbp_block",
+      "type": "ns:ObjectClass",
+      "subClassOf": "obj:basement_wall_block",
+      "label": "Блок типа ФБП"
+    },
+    {
+      "id": "prop:length",
+      "type": "ns:PropertyType",
+      "label": "Длина"
+    },
+    {
+      "id": "prop:width",
+      "type": "ns:PropertyType",
+      "label": "Ширина"
+    },
+    {
+      "id": "prop:height",
+      "type": "ns:PropertyType",
+      "label": "Высота"
+    },
+    {
+      "id": "prop:compressive_strength_class",
+      "type": "ns:PropertyType",
+      "label": "Класс бетона по прочности на сжатие"
+    },
+    {
+      "id": "prop:frost_resistance",
+      "type": "ns:PropertyType",
+      "label": "Марка по морозостойкости"
+    },
+    {
+      "id": "prop:water_resistance",
+      "type": "ns:PropertyType",
+      "label": "Марка по водонепроницаемости"
+    },
+    {
+      "id": "prop:average_density",
+      "type": "ns:PropertyType",
+      "label": "Средняя плотность"
+    },
+    {
+      "id": "prop:moisture_content",
+      "type": "ns:PropertyType",
+      "label": "Влажность"
+    },
+    {
+      "id": "prop:release_strength",
+      "type": "ns:PropertyType",
+      "label": "Отпускная прочность"
+    },
+    {
+      "id": "prop:mounting_loop_type",
+      "type": "ns:PropertyType",
+      "label": "Марка монтажной петли"
+    },
+    {
+      "id": "unit:mm",
+      "type": "ns:Unit",
+      "label": "миллиметр",
+      "symbol": "мм"
+    },
+    {
+      "id": "unit:kg_m3",
+      "type": "ns:Unit",
+      "label": "килограмм на кубический метр",
+      "symbol": "кг/м3"
+    },
+    {
+      "id": "unit:percent",
+      "type": "ns:Unit",
+      "label": "процент",
+      "symbol": "%"
+    },
+    {
+      "id": "enum:strength:B3_5",
+      "type": "ns:EnumerationValue",
+      "label": "B3,5"
+    },
+    {
+      "id": "enum:strength:B7_5",
+      "type": "ns:EnumerationValue",
+      "label": "B7,5"
+    },
+    {
+      "id": "enum:strength:B12_5",
+      "type": "ns:EnumerationValue",
+      "label": "B12,5"
+    },
+    {
+      "id": "enum:strength:B15",
+      "type": "ns:EnumerationValue",
+      "label": "B15"
+    },
+    {
+      "id": "enum:loop:P1",
+      "type": "ns:EnumerationValue",
+      "label": "П1"
+    },
+    {
+      "id": "enum:loop:P2",
+      "type": "ns:EnumerationValue",
+      "label": "П2"
+    },
+    {
+      "id": "enum:loop:P2a",
+      "type": "ns:EnumerationValue",
+      "label": "П2а"
+    },
+    {
+      "id": "enum:loop:P3",
+      "type": "ns:EnumerationValue",
+      "label": "П3"
+    },
+    {
+      "id": "enum:loop:P4",
+      "type": "ns:EnumerationValue",
+      "label": "П4"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "@context": "core.jsonld",
+  "@graph": [
+    {
+      "id": "concept:gost_13579_2018:block",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "блок",
+      "definition": "Конструктивный сборный элемент или изделие прямоугольной формы.",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_3_1",
+      "denotes": "obj:block"
+    },
+    {
+      "id": "concept:gost_13579_2018:basement_wall_block",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "блоки бетонные для стен подвалов",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_1",
+      "denotes": "obj:basement_wall_block"
+    },
+    {
+      "id": "concept:gost_13579_2018:fbs",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "ФБС",
+      "definition": "Сплошной блок.",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_1",
+      "denotes": "obj:fbs_block"
+    },
+    {
+      "id": "concept:gost_13579_2018:fbv",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "ФБВ",
+      "definition": "Блок с вырезом.",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_1",
+      "denotes": "obj:fbv_block"
+    },
+    {
+      "id": "concept:gost_13579_2018:fbp",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "ФБП",
+      "definition": "Пустотелый блок.",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_1",
+      "denotes": "obj:fbp_block"
+    },
+    {
+      "id": "concept:gost_13579_2018:heavy_concrete",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "тяжелый бетон",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_1",
+      "denotes": "mat:heavy_concrete"
+    },
+    {
+      "id": "concept:gost_13579_2018:lightweight_concrete",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "легкий бетон",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_1",
+      "denotes": "mat:lightweight_concrete"
+    },
+    {
+      "id": "concept:gost_13579_2018:dense_silicate_concrete",
+      "type": "ns:DocumentConcept",
+      "prefLabel": "плотный силикатный бетон",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_1",
+      "denotes": "mat:dense_silicate_concrete"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "@context": "core.jsonld",
+  "@graph": [
+    {
+      "id": "doc:gost_13579_2018",
+      "type": "ns:NormativeDocument",
+      "title": "ГОСТ 13579-2018. Блоки бетонные для стен подвалов. Технические условия",
+      "label": "ГОСТ 13579-2018",
+      "issued": "2018-01-01",
+      "effectiveDate": "2019-05-01",
+      "status": "active"
+    }
+  ]
+}

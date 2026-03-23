@@ -1,0 +1,682 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "bim": "https://example.org/bim/",
+    "gost": "https://example.org/gost/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "id": "@id",
+    "type": "@type",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "title": "dcterms:title",
+    "issued": {"@id": "dcterms:issued", "@type": "xsd:date"},
+    "source": {"@id": "prov:wasDerivedFrom", "@type": "@id"},
+    "references": {"@id": "dcterms:references", "@type": "@id"},
+    "subject": {"@id": "dcterms:subject", "@type": "@id"},
+
+    "subClassOf": {"@id": "rdfs:subClassOf", "@type": "@id"},
+    "appliesTo": {"@id": "bim:appliesTo", "@type": "@id"},
+    "material": {"@id": "bim:material", "@type": "@id"},
+    "hasRequirement": {"@id": "bim:hasRequirement", "@type": "@id"},
+    "hasTestMethod": {"@id": "bim:hasTestMethod", "@type": "@id"},
+    "hasMountingLoop": {"@id": "bim:hasMountingLoop", "@type": "@id"},
+    "hasSurfaceCategory": {"@id": "bim:hasSurfaceCategory", "@type": "@id"},
+
+    "mark": "bim:mark",
+    "markPattern": "bim:markPattern",
+    "code": "bim:code",
+    "kind": "bim:kind",
+    "pageStart": {"@id": "bim:pageStart", "@type": "xsd:integer"},
+    "pageEnd": {"@id": "bim:pageEnd", "@type": "xsd:integer"},
+
+    "property": "bim:property",
+    "value": "bim:value",
+    "unit": "bim:unit",
+    "minValue": {"@id": "schema:minValue", "@type": "xsd:decimal"},
+    "maxValue": {"@id": "schema:maxValue", "@type": "xsd:decimal"},
+    "allowedValues": "bim:allowedValues",
+
+    "length": "bim:length",
+    "width": "bim:width",
+    "height": "bim:height",
+    "averageDensity": "bim:averageDensity",
+    "concreteVolume": "bim:concreteVolume",
+    "steelMass": "bim:steelMass",
+    "blockMass": "bim:blockMass",
+    "compressiveStrengthClass": "bim:compressiveStrengthClass",
+    "frostResistance": "bim:frostResistance",
+    "waterResistance": "bim:waterResistance",
+    "releaseStrengthPercent": "bim:releaseStrengthPercent",
+    "humidity": "bim:humidity",
+    "straightnessDeviation": "bim:straightnessDeviation",
+    "lengthTolerance": "bim:lengthTolerance",
+    "widthHeightTolerance": "bim:widthHeightTolerance",
+    "cutoutTolerance": "bim:cutoutTolerance",
+    "crackWidth": "bim:crackWidth",
+    "stackHeight": "bim:stackHeight",
+    "padThickness": "bim:padThickness",
+    "diameter": "bim:diameter"
+  },
+
+  "@graph": [
+    {
+      "id": "gost:13579-2018",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 13579-2018. Блоки бетонные для стен подвалов. Технические условия",
+      "issued": "2019-05-01",
+      "comment": "Стандарт распространяется на блоки из тяжелого, легкого и плотного силикатного бетона для стен подвалов и технических подполий; сплошные блоки допускается применять для фундаментов.",
+      "pageStart": 3,
+      "pageEnd": 14,
+      "references": [
+        "gost:10060-2012",
+        "gost:10180-2012",
+        "gost:10922-2017",
+        "gost:12730.0-78",
+        "gost:12730.2-78",
+        "gost:12730.3-78",
+        "gost:12730.5-84",
+        "gost:13015-2012",
+        "gost:17624-2012",
+        "gost:18105-2010",
+        "gost:21718-84",
+        "gost:22690-2015",
+        "gost:26433.0-85",
+        "gost:26433.1-89",
+        "gost:34028-2016"
+      ]
+    },
+
+    {
+      "id": "bim:BuildingElement",
+      "type": "rdfs:Class",
+      "label": "Строительный элемент"
+    },
+    {
+      "id": "bim:Block",
+      "type": "rdfs:Class",
+      "label": "Блок",
+      "comment": "Конструктивный сборный элемент или изделие прямоугольной формы, массой от десятка килограммов до нескольких тонн, изготовляемый обычно в заводских условиях.",
+      "subClassOf": "bim:BuildingElement",
+      "source": "gost:13579-2018",
+      "pageStart": 4,
+      "pageEnd": 4
+    },
+    {
+      "id": "bim:ConcreteBlock",
+      "type": "rdfs:Class",
+      "label": "Бетонный блок",
+      "comment": "Блок, прочность которого в стадии эксплуатации обеспечивается одним бетоном; допускается конструктивное армирование или рабочая арматура на ограниченных участках.",
+      "subClassOf": "bim:Block",
+      "source": "gost:13579-2018",
+      "pageStart": 4,
+      "pageEnd": 4
+    },
+    {
+      "id": "bim:BasementWallBlock",
+      "type": "rdfs:Class",
+      "label": "Бетонный блок для стен подвала",
+      "comment": "Бетонный блок, применяемый для устройства стен подвала или технического подполья здания.",
+      "subClassOf": "bim:ConcreteBlock",
+      "source": "gost:13579-2018",
+      "pageStart": 4,
+      "pageEnd": 4,
+      "hasRequirement": [
+        "bim:req_geometry_tolerances",
+        "bim:req_surface_quality",
+        "bim:req_storage_transport"
+      ]
+    },
+
+    {
+      "id": "bim:FBS",
+      "type": "rdfs:Class",
+      "label": "ФБС",
+      "comment": "Сплошной блок. Допускается применять для фундаментов.",
+      "code": "ФБС",
+      "kind": "solid",
+      "subClassOf": "bim:BasementWallBlock",
+      "source": "gost:13579-2018",
+      "pageStart": 3,
+      "pageEnd": 8
+    },
+    {
+      "id": "bim:FBV",
+      "type": "rdfs:Class",
+      "label": "ФБВ",
+      "comment": "Блок с вырезом для укладки перемычек и пропуска коммуникаций под потолками подвалов и технических подполий.",
+      "code": "ФБВ",
+      "kind": "withCutout",
+      "subClassOf": "bim:BasementWallBlock",
+      "source": "gost:13579-2018",
+      "pageStart": 4,
+      "pageEnd": 7
+    },
+    {
+      "id": "bim:FBP",
+      "type": "rdfs:Class",
+      "label": "ФБП",
+      "comment": "Пустотный блок с открытыми вниз пустотами.",
+      "code": "ФБП",
+      "kind": "hollowOpenDown",
+      "subClassOf": "bim:BasementWallBlock",
+      "source": "gost:13579-2018",
+      "pageStart": 4,
+      "pageEnd": 7
+    },
+
+    {
+      "id": "bim:HeavyConcrete",
+      "type": "rdfs:Class",
+      "label": "Тяжелый бетон",
+      "code": "Т",
+      "comment": "Для таблиц 2 справочные значения массы приведены для средней плотности 2400 кг/м3.",
+      "source": "gost:13579-2018",
+      "pageStart": 8,
+      "pageEnd": 8,
+      "averageDensity": {
+        "value": 2400,
+        "unit": "kg/m3"
+      },
+      "hasRequirement": ["bim:req_strength_heavy_light", "bim:req_crack_heavy_silicate"]
+    },
+    {
+      "id": "bim:LightConcrete",
+      "type": "rdfs:Class",
+      "label": "Легкий бетон",
+      "code": "Л",
+      "comment": "Средняя плотность блока по области применения не менее 1800 кг/м3; для таблицы 3 справочные значения массы приведены для 1800 кг/м3.",
+      "source": "gost:13579-2018",
+      "pageStart": 3,
+      "pageEnd": 11,
+      "averageDensity": {
+        "minValue": 1800,
+        "unit": "kg/m3"
+      },
+      "hasRequirement": ["bim:req_strength_heavy_light", "bim:req_light_humidity", "bim:req_crack_light"]
+    },
+    {
+      "id": "bim:DenseSilicateConcrete",
+      "type": "rdfs:Class",
+      "label": "Плотный силикатный бетон",
+      "code": "С",
+      "comment": "Средняя плотность блока по области применения не менее 1800 кг/м3; для таблицы 4 справочные значения массы приведены для 2000 кг/м3.",
+      "source": "gost:13579-2018",
+      "pageStart": 3,
+      "pageEnd": 10,
+      "averageDensity": {
+        "minValue": 1800,
+        "unit": "kg/m3"
+      },
+      "hasRequirement": ["bim:req_strength_silicate", "bim:req_crack_heavy_silicate"]
+    },
+
+    {
+      "id": "bim:req_mark_pattern",
+      "type": "bim:Requirement",
+      "label": "Структура условного обозначения марки",
+      "markPattern": "<Тип блока> <Длина_дм>.<Ширина_дм>.<Высота_дм>-<Вид бетона>",
+      "comment": "Тип блока + размеры в дециметрах + вид бетона: Т, Л, С. Примеры: ФБС 24.4.6-Т; ФБВ 9.4.6-Л; ФБП 24.5.6-С.",
+      "source": "gost:13579-2018",
+      "pageStart": 7,
+      "pageEnd": 7,
+      "appliesTo": ["bim:FBS", "bim:FBV", "bim:FBP"]
+    },
+    {
+      "id": "bim:req_strength_heavy_light",
+      "type": "bim:Requirement",
+      "label": "Класс бетона по прочности для тяжелого и легкого бетона",
+      "comment": "При соответствующем обосновании допускаются классы, отличающиеся от таблиц, но не более В15 и не менее В3,5.",
+      "compressiveStrengthClass": {
+        "minValue": 3.5,
+        "maxValue": 15,
+        "unit": "class_B"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 8,
+      "pageEnd": 8,
+      "appliesTo": ["bim:HeavyConcrete", "bim:LightConcrete"]
+    },
+    {
+      "id": "bim:req_strength_silicate",
+      "type": "bim:Requirement",
+      "label": "Класс бетона по прочности для плотного силикатного бетона",
+      "comment": "При соответствующем обосновании допускаются классы, отличающиеся от таблиц, но не более В15 и не менее В12,5.",
+      "compressiveStrengthClass": {
+        "minValue": 12.5,
+        "maxValue": 15,
+        "unit": "class_B"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 8,
+      "pageEnd": 8,
+      "appliesTo": "bim:DenseSilicateConcrete"
+    },
+    {
+      "id": "bim:req_release_strength",
+      "type": "bim:Requirement",
+      "label": "Нормируемая отпускная прочность",
+      "comment": "Не менее 50% для бетона класса В15 и выше, 70% для В12,5 и ниже, 100% для автоклавного твердения.",
+      "releaseStrengthPercent": {
+        "allowedValues": [50, 70, 100],
+        "unit": "%"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 10,
+      "pageEnd": 11,
+      "appliesTo": "bim:BasementWallBlock"
+    },
+    {
+      "id": "bim:req_light_humidity",
+      "type": "bim:Requirement",
+      "label": "Ограничение отпускной влажности легкого бетона",
+      "humidity": {
+        "maxValue": 12,
+        "unit": "%"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "appliesTo": "bim:LightConcrete"
+    },
+    {
+      "id": "bim:req_geometry_tolerances",
+      "type": "bim:Requirement",
+      "label": "Точность геометрических параметров",
+      "lengthTolerance": {
+        "value": 13,
+        "unit": "mm"
+      },
+      "widthHeightTolerance": {
+        "value": 8,
+        "unit": "mm"
+      },
+      "cutoutTolerance": {
+        "value": 5,
+        "unit": "mm"
+      },
+      "straightnessDeviation": {
+        "maxValue": 3,
+        "unit": "mm"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "appliesTo": "bim:BasementWallBlock"
+    },
+    {
+      "id": "bim:req_surface_quality",
+      "type": "bim:Requirement",
+      "label": "Категории бетонной поверхности",
+      "hasSurfaceCategory": [
+        "bim:SurfaceA3",
+        "bim:SurfaceA5",
+        "bim:SurfaceA6",
+        "bim:SurfaceA7"
+      ],
+      "source": "gost:13579-2018",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "appliesTo": "bim:BasementWallBlock"
+    },
+    {
+      "id": "bim:req_crack_heavy_silicate",
+      "type": "bim:Requirement",
+      "label": "Ширина местных поверхностных усадочных трещин для тяжелого и плотного силикатного бетона",
+      "crackWidth": {
+        "maxValue": 0.1,
+        "unit": "mm"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "appliesTo": ["bim:HeavyConcrete", "bim:DenseSilicateConcrete"]
+    },
+    {
+      "id": "bim:req_crack_light",
+      "type": "bim:Requirement",
+      "label": "Ширина местных поверхностных усадочных трещин для легкого бетона",
+      "crackWidth": {
+        "maxValue": 0.2,
+        "unit": "mm"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "appliesTo": "bim:LightConcrete"
+    },
+    {
+      "id": "bim:req_storage_transport",
+      "type": "bim:Requirement",
+      "label": "Хранение и транспортирование",
+      "stackHeight": {
+        "maxValue": 2.5,
+        "unit": "m"
+      },
+      "padThickness": {
+        "minValue": 30,
+        "unit": "mm"
+      },
+      "comment": "Блоки хранят в штабелях по маркам и партиям; при транспортировании должны быть надежно закреплены от смещения.",
+      "source": "gost:13579-2018",
+      "pageStart": 12,
+      "pageEnd": 13,
+      "appliesTo": "bim:BasementWallBlock"
+    },
+
+    {
+      "id": "bim:SurfaceA3",
+      "type": "bim:SurfaceCategory",
+      "label": "А3",
+      "comment": "Лицевая поверхность под окраску."
+    },
+    {
+      "id": "bim:SurfaceA5",
+      "type": "bim:SurfaceCategory",
+      "label": "А5",
+      "comment": "Лицевая поверхность под отделку керамическими плитками по слою раствора."
+    },
+    {
+      "id": "bim:SurfaceA6",
+      "type": "bim:SurfaceCategory",
+      "label": "А6",
+      "comment": "Лицевая неотделываемая поверхность."
+    },
+    {
+      "id": "bim:SurfaceA7",
+      "type": "bim:SurfaceCategory",
+      "label": "А7",
+      "comment": "Нелицевая, не видимая в условиях эксплуатации поверхность."
+    },
+
+    {
+      "id": "bim:LoopP1",
+      "type": "bim:MountingLoop",
+      "label": "П1",
+      "diameter": {
+        "value": 8,
+        "unit": "mm"
+      },
+      "length": {
+        "value": 970,
+        "unit": "mm"
+      },
+      "blockMass": {
+        "value": 0.38,
+        "unit": "kg"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 14,
+      "pageEnd": 14
+    },
+    {
+      "id": "bim:LoopP2",
+      "type": "bim:MountingLoop",
+      "label": "П2",
+      "diameter": {
+        "value": 10,
+        "unit": "mm"
+      },
+      "length": {
+        "value": 1180,
+        "unit": "mm"
+      },
+      "blockMass": {
+        "value": 0.73,
+        "unit": "kg"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 14,
+      "pageEnd": 14
+    },
+    {
+      "id": "bim:LoopP2a",
+      "type": "bim:MountingLoop",
+      "label": "П2а",
+      "diameter": {
+        "value": 10,
+        "unit": "mm"
+      },
+      "length": {
+        "value": 1180,
+        "unit": "mm"
+      },
+      "blockMass": {
+        "value": 0.73,
+        "unit": "kg"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 14,
+      "pageEnd": 14
+    },
+    {
+      "id": "bim:LoopP3",
+      "type": "bim:MountingLoop",
+      "label": "П3",
+      "diameter": {
+        "value": 12,
+        "unit": "mm"
+      },
+      "length": {
+        "value": 1330,
+        "unit": "mm"
+      },
+      "blockMass": {
+        "value": 1.18,
+        "unit": "kg"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 14,
+      "pageEnd": 14
+    },
+    {
+      "id": "bim:LoopP4",
+      "type": "bim:MountingLoop",
+      "label": "П4",
+      "diameter": {
+        "value": 8,
+        "unit": "mm"
+      },
+      "length": {
+        "value": 940,
+        "unit": "mm"
+      },
+      "blockMass": {
+        "value": 0.37,
+        "unit": "kg"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 14,
+      "pageEnd": 14
+    },
+
+    {
+      "id": "gost:10180-2012",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 10180-2012. Бетоны. Методы определения прочности по контрольным образцам"
+    },
+    {
+      "id": "gost:17624-2012",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 17624-2012. Бетоны. Ультразвуковой метод определения прочности"
+    },
+    {
+      "id": "gost:22690-2015",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 22690-2015. Бетоны. Определение прочности механическими методами неразрушающего контроля"
+    },
+    {
+      "id": "gost:10060-2012",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 10060-2012. Бетоны. Методы определения морозостойкости"
+    },
+    {
+      "id": "gost:12730.0-78",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 12730.0-78. Бетоны. Общие требования к методам определения плотности, влажности, водопоглощения, пористости и водонепроницаемости"
+    },
+    {
+      "id": "gost:12730.2-78",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 12730.2-78. Бетоны. Метод определения влажности"
+    },
+    {
+      "id": "gost:12730.3-78",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 12730.3-78. Бетоны. Метод определения водопоглощения"
+    },
+    {
+      "id": "gost:12730.5-84",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 12730.5-84. Бетоны. Методы определения водонепроницаемости"
+    },
+    {
+      "id": "gost:13015-2012",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 13015-2012. Изделия бетонные и железобетонные для строительства. Общие технические требования. Правила приемки, маркировки, транспортирования и хранения"
+    },
+    {
+      "id": "gost:10922-2017",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 10922-2017. Арматурные и закладные изделия, их сварные, вязаные и механические соединения для железобетонных конструкций. Общие технические условия"
+    },
+    {
+      "id": "gost:18105-2010",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 18105-2010. Бетоны. Правила контроля и оценки прочности"
+    },
+    {
+      "id": "gost:21718-84",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 21718-84. Материалы строительные. Диэлькометрический метод определения влажности"
+    },
+    {
+      "id": "gost:26433.0-85",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 26433.0-85. Система обеспечения точности геометрических параметров в строительстве. Правила выполнения измерений. Общие положения"
+    },
+    {
+      "id": "gost:26433.1-89",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 26433.1-89. Система обеспечения точности геометрических параметров в строительстве. Правила выполнения измерений. Элементы заводского изготовления"
+    },
+    {
+      "id": "gost:34028-2016",
+      "type": "schema:CreativeWork",
+      "title": "ГОСТ 34028-2016. Прокат арматурный для железобетонных конструкций. Технические условия"
+    },
+
+    {
+      "id": "bim:FBS_24_4_6_T",
+      "type": "bim:FBS",
+      "label": "ФБС 24.4.6-Т",
+      "mark": "ФБС 24.4.6-Т",
+      "material": "bim:HeavyConcrete",
+      "length": {
+        "value": 2380,
+        "unit": "mm"
+      },
+      "width": {
+        "value": 400,
+        "unit": "mm"
+      },
+      "height": {
+        "value": 580,
+        "unit": "mm"
+      },
+      "compressiveStrengthClass": "B7.5",
+      "hasMountingLoop": "bim:LoopP2a",
+      "concreteVolume": {
+        "value": 0.543,
+        "unit": "m3"
+      },
+      "steelMass": {
+        "value": 1.46,
+        "unit": "kg"
+      },
+      "blockMass": {
+        "value": 1.30,
+        "unit": "t"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 7,
+      "pageEnd": 8
+    },
+    {
+      "id": "bim:FBV_9_4_6_L",
+      "type": "bim:FBV",
+      "label": "ФБВ 9.4.6-Л",
+      "mark": "ФБВ 9.4.6-Л",
+      "material": "bim:LightConcrete",
+      "length": {
+        "value": 880,
+        "unit": "mm"
+      },
+      "width": {
+        "value": 400,
+        "unit": "mm"
+      },
+      "height": {
+        "value": 580,
+        "unit": "mm"
+      },
+      "compressiveStrengthClass": "B7.5",
+      "hasMountingLoop": "bim:LoopP1",
+      "concreteVolume": {
+        "value": 0.161,
+        "unit": "m3"
+      },
+      "steelMass": {
+        "value": 0.76,
+        "unit": "kg"
+      },
+      "blockMass": {
+        "value": 0.29,
+        "unit": "t"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 7,
+      "pageEnd": 9
+    },
+    {
+      "id": "bim:FBP_24_5_6_C",
+      "type": "bim:FBP",
+      "label": "ФБП 24.5.6-С",
+      "mark": "ФБП 24.5.6-С",
+      "material": "bim:DenseSilicateConcrete",
+      "length": {
+        "value": 2380,
+        "unit": "mm"
+      },
+      "width": {
+        "value": 500,
+        "unit": "mm"
+      },
+      "height": {
+        "value": 580,
+        "unit": "mm"
+      },
+      "compressiveStrengthClass": "B15",
+      "hasMountingLoop": "bim:LoopP2",
+      "concreteVolume": {
+        "value": 0.526,
+        "unit": "m3"
+      },
+      "steelMass": {
+        "value": 1.46,
+        "unit": "kg"
+      },
+      "blockMass": {
+        "value": 1.05,
+        "unit": "t"
+      },
+      "source": "gost:13579-2018",
+      "pageStart": 7,
+      "pageEnd": 10
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "ns": "https://example.org/ns/",
+    "doc": "https://example.org/doc/",
+    "frag": "https://example.org/frag/",
+    "concept": "https://example.org/concept/",
+    "req": "https://example.org/req/",
+    "mat": "https://example.org/material/",
+    "obj": "https://example.org/object/",
+    "prop": "https://example.org/property/",
+    "val": "https://example.org/value/",
+    "unit": {
+      "@id": "ns:unit",
+      "@type": "@id"
+    },
+    "method": "https://example.org/method/",
+    "cond": "https://example.org/condition/",
+    "enum": "https://example.org/enum/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "type": "@type",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "prefLabel": "skos:prefLabel",
+    "altLabel": "skos:altLabel",
+    "definition": "skos:definition",
+    "title": "dcterms:title",
+    "issued": {
+      "@id": "dcterms:issued",
+      "@type": "xsd:date"
+    },
+    "effectiveDate": {
+      "@id": "ns:effectiveDate",
+      "@type": "xsd:date"
+    },
+    "definedIn": {
+      "@id": "ns:definedIn",
+      "@type": "@id"
+    },
+    "statedIn": {
+      "@id": "ns:statedIn",
+      "@type": "@id"
+    },
+    "denotes": {
+      "@id": "ns:denotes",
+      "@type": "@id"
+    },
+    "refersTo": {
+      "@id": "ns:refersTo",
+      "@type": "@id"
+    },
+    "appliesTo": {
+      "@id": "ns:appliesTo",
+      "@type": "@id"
+    },
+    "aboutProperty": {
+      "@id": "ns:aboutProperty",
+      "@type": "@id"
+    },
+    "hasOperator": "ns:hasOperator",
+    "hasValue": "ns:hasValue",
+    "hasCondition": {
+      "@id": "ns:hasCondition",
+      "@type": "@id"
+    },
+    "verifiedBy": {
+      "@id": "ns:verifiedBy",
+      "@type": "@id"
+    },
+    "hasNormativeForce": "ns:hasNormativeForce",
+    "specializes": {
+      "@id": "ns:specializes",
+      "@type": "@id"
+    },
+    "exceptionTo": {
+      "@id": "ns:exceptionTo",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "hasMaterial": {
+      "@id": "ns:hasMaterial",
+      "@type": "@id"
+    },
+    "hasPropertyType": {
+      "@id": "ns:hasPropertyType",
+      "@type": "@id"
+    },
+    "hasAllowedValue": {
+      "@id": "ns:hasAllowedValue",
+      "@type": "@id"
+    },
+    "numericValue": {
+      "@id": "ns:numericValue",
+      "@type": "xsd:decimal"
+    },
+    "minValue": {
+      "@id": "ns:minValue",
+      "@type": "xsd:decimal"
+    },
+    "maxValue": {
+      "@id": "ns:maxValue",
+      "@type": "xsd:decimal"
+    },
+    "symbol": "ns:symbol",
+    "fragmentType": "ns:fragmentType",
+    "clauseNumber": "ns:clauseNumber",
+    "tableNumber": "ns:tableNumber",
+    "pageStart": {
+      "@id": "ns:pageStart",
+      "@type": "xsd:integer"
+    },
+    "pageEnd": {
+      "@id": "ns:pageEnd",
+      "@type": "xsd:integer"
+    },
+    "textQuote": "ns:textQuote",
+    "status": "ns:status"
+  },
+  "@graph": [
+    {
+      "id": "ns:DomainEntity",
+      "type": "rdfs:Class",
+      "label": "Сущность предметной области"
+    },
+    {
+      "id": "ns:MaterialClass",
+      "type": "rdfs:Class",
+      "subClassOf": "ns:DomainEntity",
+      "label": "Класс материала"
+    },
+    {
+      "id": "ns:ObjectClass",
+      "type": "rdfs:Class",
+      "subClassOf": "ns:DomainEntity",
+      "label": "Класс объекта"
+    },
+    {
+      "id": "ns:PropertyType",
+      "type": "rdfs:Class",
+      "label": "Тип свойства"
+    },
+    {
+      "id": "ns:EnumerationValue",
+      "type": "rdfs:Class",
+      "label": "Значение перечисления"
+    },
+    {
+      "id": "ns:QuantitativeValue",
+      "type": "rdfs:Class",
+      "label": "Количественное значение"
+    },
+    {
+      "id": "ns:NormativeDocument",
+      "type": "rdfs:Class",
+      "label": "Нормативный документ"
+    },
+    {
+      "id": "ns:DocumentFragment",
+      "type": "rdfs:Class",
+      "label": "Фрагмент документа"
+    },
+    {
+      "id": "ns:DocumentConcept",
+      "type": "rdfs:Class",
+      "label": "Документный концепт"
+    },
+    {
+      "id": "ns:Requirement",
+      "type": "rdfs:Class",
+      "label": "Нормативное требование"
+    },
+    {
+      "id": "ns:Condition",
+      "type": "rdfs:Class",
+      "label": "Условие применимости"
+    },
+    {
+      "id": "ns:TestMethod",
+      "type": "rdfs:Class",
+      "label": "Метод контроля / испытания"
+    },
+    {
+      "id": "ns:Unit",
+      "type": "rdfs:Class",
+      "label": "Единица измерения"
+    }
+  ]
+}

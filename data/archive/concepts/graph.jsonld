@@ -1,0 +1,86 @@
+{
+    "@context":{
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "ksi": "urn:ksi:",
+        "cpr": "urn:ksi:table:16:",
+        
+        "version": "dcterms:hasVersion",
+        "status": "skos:scopeNote",
+        "skos:broader": { "@type": "@id" }
+    },
+    "@graph":[
+    {
+        "@id": "cpr:AAAD",
+    "@type": "skos:Concept",
+
+
+    "skos:prefLabel": "Блок бетонный для стен подвалов",
+    "skos:notation": "AAAD",
+    "skos:comment": "Бетонный блок, применяемый для устройства стен подвала или технического подполья здания",
+
+
+    "skos:broader": {
+        "@id": "cpr:AAA",
+        "rdfs:label": "Фундамент"
+    },
+
+    "skos:relatedMatch": [
+        { "rdfs:label": "КСР: 05.2.01" },
+        { "rdfs:label": "МССК: ЭЛ 10 10 15" },
+        { "rdfs:label": "МССК: ЭЛ 10 10 20" }
+    ],
+    
+    "dc:source": [
+        "Приказ Минстроя России от 17.11.2022 N969/пр", 
+        "ГОСТ 13579-2018"
+    ],
+
+    "dc:isPartOf": {
+        "@id": "ksi:table:16",
+        "rdfs:label": "Строительное изделие (СтИ / cpr)"
+    },
+
+    "version": "1.0.0",
+    "status": "relevant"
+    },
+    {
+"@id": "cpr:AAAD030/1.0.0",
+    "@type": "skos:Concept",
+
+    "skos:notation": "AAAD030",
+    "version": "1.0.0",
+    "status": "outdated",
+
+    "skos:prefLabel": "Блок бетонный для стен подвала пустотный (с открытыми вниз пустотами) ФБП",
+
+    "skos:comment": "None",
+
+    "skos:broader": {
+        "@id": "cpr:AAAD"
+    },
+
+    "skos:relatedMatch": [
+        { "rdfs:label": "КСР: 05.1.05" },
+        { "rdfs:label": "МССК: ЭЛ 10 10" }
+    ],
+
+    "dc:source":[
+        "Приказ Минстроя России 2022-11-17 969/пр",
+        "Приказ Москомэкспертизы 2022-12-28 МКЭ-ОД/22-128"
+    ],
+
+    "dc:isPartOf": {
+        "@id": "ksi:table:16",
+        "rdfs:label": "Строительное изделие (СтИ / cpr)"
+    },
+
+    "skos:historyNote": {
+        "version": "1.0.0",
+        "status": "relevant"
+    }
+    }
+]
+}

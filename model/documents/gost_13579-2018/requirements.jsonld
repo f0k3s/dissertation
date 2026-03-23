@@ -1,0 +1,260 @@
+{
+  "@context": "core.jsonld",
+  "@graph": [
+    {
+      "id": "method:gost_10060",
+      "type": "ns:TestMethod",
+      "label": "ГОСТ 10060 — методы определения морозостойкости"
+    },
+    {
+      "id": "method:gost_10180",
+      "type": "ns:TestMethod",
+      "label": "ГОСТ 10180 — методы определения прочности по контрольным образцам"
+    },
+    {
+      "id": "cond:for_foundations",
+      "type": "ns:Condition",
+      "label": "при применении для фундаментов"
+    },
+    {
+      "id": "cond:for_lightweight_concrete",
+      "type": "ns:Condition",
+      "label": "если блок изготовлен из легкого бетона"
+    },
+    {
+      "id": "cond:special_lifting_devices_and_agreement",
+      "type": "ns:Condition",
+      "label": "при применении специальных захватных устройств и по согласованию сторон"
+    },
+    {
+      "id": "req:gost_13579_2018:001",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_1",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:average_density",
+      "hasOperator": ">=",
+      "hasValue": {
+        "type": "ns:QuantitativeValue",
+        "numericValue": 1800,
+        "unit": "unit:kg_m3"
+      },
+      "hasCondition": "mat:dense_silicate_concrete",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:002",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_1",
+      "appliesTo": "obj:fbs_block",
+      "hasOperator": "allowedForUse",
+      "hasValue": "foundation_application",
+      "hasCondition": "cond:for_foundations",
+      "hasNormativeForce": "permitted"
+    },
+    {
+      "id": "req:gost_13579_2018:003",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:table_1",
+      "appliesTo": "obj:fbs_block",
+      "aboutProperty": "prop:length",
+      "hasOperator": "in",
+      "hasValue": [
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 2380,
+          "unit": "unit:mm"
+        },
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 1180,
+          "unit": "unit:mm"
+        },
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 880,
+          "unit": "unit:mm"
+        }
+      ],
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:004",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:table_1",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:height",
+      "hasOperator": "in",
+      "hasValue": [
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 580,
+          "unit": "unit:mm"
+        },
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 280,
+          "unit": "unit:mm"
+        }
+      ],
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:005",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:table_1",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:width",
+      "hasOperator": "in",
+      "hasValue": [
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 300,
+          "unit": "unit:mm"
+        },
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 400,
+          "unit": "unit:mm"
+        },
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 500,
+          "unit": "unit:mm"
+        },
+        {
+          "type": "ns:QuantitativeValue",
+          "numericValue": 600,
+          "unit": "unit:mm"
+        }
+      ],
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:006",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_3",
+      "appliesTo": "obj:basement_wall_block",
+      "hasOperator": "markPattern",
+      "hasValue": "<Тип блока> <Длина.Ширина.Высота>-<Вид бетона> ГОСТ 13579-2018",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:007",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_4",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:compressive_strength_class",
+      "hasOperator": ">=",
+      "hasValue": "enum:strength:B3_5",
+      "hasCondition": "mat:heavy_concrete",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:008",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_4",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:compressive_strength_class",
+      "hasOperator": ">=",
+      "hasValue": "enum:strength:B3_5",
+      "hasCondition": "mat:lightweight_concrete",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:009",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_4",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:compressive_strength_class",
+      "hasOperator": ">=",
+      "hasValue": "enum:strength:B12_5",
+      "hasCondition": "mat:dense_silicate_concrete",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:010",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_4",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:compressive_strength_class",
+      "hasOperator": "<=",
+      "hasValue": "enum:strength:B15",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:011",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_5",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:mounting_loop_type",
+      "hasOperator": "in",
+      "hasValue": [
+        "enum:loop:P1",
+        "enum:loop:P2",
+        "enum:loop:P2a",
+        "enum:loop:P3",
+        "enum:loop:P4"
+      ],
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:012",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_6",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:mounting_loop_type",
+      "hasOperator": "mayBeAbsent",
+      "hasValue": true,
+      "hasCondition": "cond:special_lifting_devices_and_agreement",
+      "hasNormativeForce": "permitted"
+    },
+    {
+      "id": "req:gost_13579_2018:013",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_5_2_7",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:moisture_content",
+      "hasOperator": "<=",
+      "hasValue": {
+        "type": "ns:QuantitativeValue",
+        "numericValue": 12,
+        "unit": "unit:percent"
+      },
+      "hasCondition": "cond:for_lightweight_concrete",
+      "hasNormativeForce": "mandatory"
+    },
+    {
+      "id": "req:gost_13579_2018:014",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_4",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:compressive_strength_class",
+      "verifiedBy": "method:gost_10180",
+      "hasNormativeForce": "informative"
+    },
+    {
+      "id": "req:gost_13579_2018:015",
+      "type": "ns:Requirement",
+      "definedIn": "doc:gost_13579_2018",
+      "statedIn": "frag:gost_13579_2018:clause_4_4",
+      "appliesTo": "obj:basement_wall_block",
+      "aboutProperty": "prop:frost_resistance",
+      "verifiedBy": "method:gost_10060",
+      "hasNormativeForce": "informative"
+    }
+  ]
+}

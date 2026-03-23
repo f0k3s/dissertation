@@ -1,0 +1,95 @@
+{
+  "@context": "core.jsonld",
+  "@graph": [
+    {
+      "id": "frag:gost_13579_2018:clause_1",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "1",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "textQuote": "Область применения: блоки из тяжелого, легкого и плотного силикатного бетона; сплошные блоки допускается применять для фундаментов."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_3_1",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "3.1",
+      "pageStart": 4,
+      "pageEnd": 4,
+      "textQuote": "Определение термина 'блок'."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_4_1",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "4.1",
+      "pageStart": 4,
+      "pageEnd": 6,
+      "textQuote": "Типы блоков: ФБС, ФБВ, ФБП."
+    },
+    {
+      "id": "frag:gost_13579_2018:table_1",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "table",
+      "tableNumber": "1",
+      "pageStart": 7,
+      "pageEnd": 7,
+      "textQuote": "Основные размеры блоков."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_4_3",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "4.3",
+      "pageStart": 7,
+      "pageEnd": 8,
+      "textQuote": "Структура условного обозначения (марок) блоков."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_4_4",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "4.4",
+      "pageStart": 8,
+      "pageEnd": 8,
+      "textQuote": "Ограничения по классам прочности на сжатие для разных видов бетона."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_4_5",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "4.5",
+      "pageStart": 8,
+      "pageEnd": 10,
+      "textQuote": "Расположение монтажных петель и ссылки на таблицы 2-4."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_4_6",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "4.6",
+      "pageStart": 10,
+      "pageEnd": 10,
+      "textQuote": "Допускается изготовление блоков без монтажных петель при специальных захватных устройствах."
+    },
+    {
+      "id": "frag:gost_13579_2018:clause_5_2_7",
+      "type": "ns:DocumentFragment",
+      "definedIn": "doc:gost_13579_2018",
+      "fragmentType": "clause",
+      "clauseNumber": "5.2.7",
+      "pageStart": 11,
+      "pageEnd": 11,
+      "textQuote": "Влажность легкого бетона при отпуске потребителю не более 12%."
+    }
+  ]
+}
