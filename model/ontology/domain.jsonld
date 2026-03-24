@@ -1,0 +1,34 @@
+{
+  "@context": "./core.jsonld",
+  "@graph": [
+    {"@id": "https://example.org/construction-norms/domain/Block", "@type": "rdfs:Class", "subClassOf": "ns:ObjectClass", "label": "Блок"},
+    {"@id": "https://example.org/construction-norms/domain/ConcreteBlock", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/Block", "label": "Бетонный блок"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/ConcreteBlock", "label": "Бетонный блок для стен подвала"},
+    {"@id": "https://example.org/construction-norms/domain/SolidBasementWallBlock", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/BasementWallBlock", "label": "Сплошной блок для стен подвала"},
+    {"@id": "https://example.org/construction-norms/domain/CutoutBasementWallBlock", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/BasementWallBlock", "label": "Блок с вырезом для стен подвала"},
+    {"@id": "https://example.org/construction-norms/domain/HollowBasementWallBlock", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/BasementWallBlock", "label": "Пустотный блок для стен подвала"},
+
+    {"@id": "https://example.org/construction-norms/domain/Concrete", "@type": "rdfs:Class", "subClassOf": "ns:MaterialClass", "label": "Бетон"},
+    {"@id": "https://example.org/construction-norms/domain/HeavyConcrete", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/Concrete", "label": "Тяжелый бетон"},
+    {"@id": "https://example.org/construction-norms/domain/LightweightConcrete", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/Concrete", "label": "Легкий бетон"},
+    {"@id": "https://example.org/construction-norms/domain/DenseSilicateConcrete", "@type": "rdfs:Class", "subClassOf": "https://example.org/construction-norms/domain/Concrete", "label": "Плотный силикатный бетон"},
+    {"@id": "https://example.org/construction-norms/domain/ReinforcingSteel", "@type": "rdfs:Class", "subClassOf": "ns:MaterialClass", "label": "Арматурная сталь"},
+
+    {"@id": "https://example.org/construction-norms/domain/MountingLoop", "@type": "rdfs:Class", "subClassOf": "ns:ObjectClass", "label": "Монтажная петля"},
+    {"@id": "https://example.org/construction-norms/domain/SurfaceCategory", "@type": "rdfs:Class", "subClassOf": "ns:DomainEntity", "label": "Категория поверхности"},
+    {"@id": "https://example.org/construction-norms/domain/MarkingPattern", "@type": "rdfs:Class", "subClassOf": "ns:DomainEntity", "label": "Шаблон маркировки"},
+    {"@id": "https://example.org/construction-norms/domain/ProjectDocumentation", "@type": "rdfs:Class", "subClassOf": "ns:DomainEntity", "label": "Проектная документация"},
+    {"@id": "https://example.org/construction-norms/domain/QualityDocument", "@type": "rdfs:Class", "subClassOf": "ns:DomainEntity", "label": "Документ о качестве"},
+
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasMaterial": "https://example.org/construction-norms/domain/Concrete"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/Length"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/Width"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/Height"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/CompressiveStrengthClass"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/FrostResistance"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/WaterResistance"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/SurfaceCategory"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/TechnologicalCrackWidth"},
+    {"@id": "https://example.org/construction-norms/domain/BasementWallBlock", "hasPropertyType": "https://example.org/construction-norms/property/MountingLoopType"}
+  ]
+}

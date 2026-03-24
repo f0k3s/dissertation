@@ -1,0 +1,61 @@
+{
+  "@context": "./core.jsonld",
+  "@graph": [
+    {"@id": "https://example.org/construction-norms/enum/BlockType", "@type": "ns:Enumeration", "label": "Тип блока"},
+    {"@id": "https://example.org/construction-norms/enum/BlockType/FBS", "@type": "ns:EnumeratedValue", "label": "ФБС", "code": "FBS"},
+    {"@id": "https://example.org/construction-norms/enum/BlockType/FBV", "@type": "ns:EnumeratedValue", "label": "ФБВ", "code": "FBV"},
+    {"@id": "https://example.org/construction-norms/enum/BlockType/FBP", "@type": "ns:EnumeratedValue", "label": "ФБП", "code": "FBP"},
+
+    {"@id": "https://example.org/construction-norms/enum/ConcreteKind", "@type": "ns:Enumeration", "label": "Вид бетона"},
+    {"@id": "https://example.org/construction-norms/enum/ConcreteKind/T", "@type": "ns:EnumeratedValue", "label": "Тяжелый бетон", "code": "T"},
+    {"@id": "https://example.org/construction-norms/enum/ConcreteKind/L", "@type": "ns:EnumeratedValue", "label": "Легкий бетон", "code": "L"},
+    {"@id": "https://example.org/construction-norms/enum/ConcreteKind/S", "@type": "ns:EnumeratedValue", "label": "Плотный силикатный бетон", "code": "S"},
+
+    {"@id": "https://example.org/construction-norms/enum/StrengthClass", "@type": "ns:Enumeration", "label": "Класс прочности на сжатие"},
+    {"@id": "https://example.org/construction-norms/enum/StrengthClass/B3_5", "@type": "ns:EnumeratedValue", "label": "B3,5", "code": "B3.5"},
+    {"@id": "https://example.org/construction-norms/enum/StrengthClass/B7_5", "@type": "ns:EnumeratedValue", "label": "B7,5", "code": "B7.5"},
+    {"@id": "https://example.org/construction-norms/enum/StrengthClass/B12_5", "@type": "ns:EnumeratedValue", "label": "B12,5", "code": "B12.5"},
+    {"@id": "https://example.org/construction-norms/enum/StrengthClass/B15", "@type": "ns:EnumeratedValue", "label": "B15", "code": "B15"},
+
+    {"@id": "https://example.org/construction-norms/enum/SurfaceCategory", "@type": "ns:Enumeration", "label": "Категория бетонной поверхности"},
+    {"@id": "https://example.org/construction-norms/enum/SurfaceCategory/A3", "@type": "ns:EnumeratedValue", "label": "A3", "code": "A3"},
+    {"@id": "https://example.org/construction-norms/enum/SurfaceCategory/A5", "@type": "ns:EnumeratedValue", "label": "A5", "code": "A5"},
+    {"@id": "https://example.org/construction-norms/enum/SurfaceCategory/A6", "@type": "ns:EnumeratedValue", "label": "A6", "code": "A6"},
+    {"@id": "https://example.org/construction-norms/enum/SurfaceCategory/A7", "@type": "ns:EnumeratedValue", "label": "A7", "code": "A7"},
+
+    {"@id": "https://example.org/construction-norms/enum/MountingLoopType", "@type": "ns:Enumeration", "label": "Марка монтажной петли"},
+    {"@id": "https://example.org/construction-norms/enum/MountingLoopType/P1", "@type": "ns:EnumeratedValue", "label": "П1", "code": "P1"},
+    {"@id": "https://example.org/construction-norms/enum/MountingLoopType/P2", "@type": "ns:EnumeratedValue", "label": "П2", "code": "P2"},
+    {"@id": "https://example.org/construction-norms/enum/MountingLoopType/P2a", "@type": "ns:EnumeratedValue", "label": "П2а", "code": "P2a"},
+    {"@id": "https://example.org/construction-norms/enum/MountingLoopType/P3", "@type": "ns:EnumeratedValue", "label": "П3", "code": "P3"},
+    {"@id": "https://example.org/construction-norms/enum/MountingLoopType/P4", "@type": "ns:EnumeratedValue", "label": "П4", "code": "P4"},
+
+    {"@id": "https://example.org/construction-norms/enum/ReinforcementClass", "@type": "ns:Enumeration", "label": "Класс арматуры"},
+    {"@id": "https://example.org/construction-norms/enum/ReinforcementClass/A240", "@type": "ns:EnumeratedValue", "label": "A240", "code": "A240"},
+    {"@id": "https://example.org/construction-norms/enum/ReinforcementClass/Ac300", "@type": "ns:EnumeratedValue", "label": "Ас300", "code": "Ac300"},
+
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType", "@type": "ns:Enumeration", "label": "Тип фрагмента документа"},
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType/section", "@type": "ns:EnumeratedValue", "label": "Раздел", "code": "section"},
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType/clause", "@type": "ns:EnumeratedValue", "label": "Пункт", "code": "clause"},
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType/table", "@type": "ns:EnumeratedValue", "label": "Таблица", "code": "table"},
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType/figure", "@type": "ns:EnumeratedValue", "label": "Рисунок", "code": "figure"},
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType/appendix", "@type": "ns:EnumeratedValue", "label": "Приложение", "code": "appendix"},
+    {"@id": "https://example.org/construction-norms/enum/DocumentFragmentType/note", "@type": "ns:EnumeratedValue", "label": "Примечание", "code": "note"},
+
+    {"@id": "https://example.org/construction-norms/enum/NormativeForce", "@type": "ns:Enumeration", "label": "Нормативная сила"},
+    {"@id": "https://example.org/construction-norms/enum/NormativeForce/mandatory", "@type": "ns:EnumeratedValue", "label": "Обязательное", "code": "mandatory"},
+    {"@id": "https://example.org/construction-norms/enum/NormativeForce/permitted", "@type": "ns:EnumeratedValue", "label": "Допустимое", "code": "permitted"},
+    {"@id": "https://example.org/construction-norms/enum/NormativeForce/recommended", "@type": "ns:EnumeratedValue", "label": "Рекомендуемое", "code": "recommended"},
+    {"@id": "https://example.org/construction-norms/enum/NormativeForce/prohibited", "@type": "ns:EnumeratedValue", "label": "Запрещенное", "code": "prohibited"},
+
+    {"@id": "https://example.org/construction-norms/enum/Operator", "@type": "ns:Enumeration", "label": "Оператор"},
+    {"@id": "https://example.org/construction-norms/enum/Operator/eq", "@type": "ns:EnumeratedValue", "label": "равно", "code": "="},
+    {"@id": "https://example.org/construction-norms/enum/Operator/gte", "@type": "ns:EnumeratedValue", "label": "не менее", "code": ">="},
+    {"@id": "https://example.org/construction-norms/enum/Operator/lte", "@type": "ns:EnumeratedValue", "label": "не более", "code": "<="},
+    {"@id": "https://example.org/construction-norms/enum/Operator/in", "@type": "ns:EnumeratedValue", "label": "принадлежит множеству", "code": "in"},
+    {"@id": "https://example.org/construction-norms/enum/Operator/notAllowed", "@type": "ns:EnumeratedValue", "label": "не допускается", "code": "notAllowed"},
+
+    {"@id": "https://example.org/construction-norms/enum/FrostResistanceGrade", "@type": "ns:Enumeration", "label": "Марка по морозостойкости"},
+    {"@id": "https://example.org/construction-norms/enum/WaterResistanceGrade", "@type": "ns:Enumeration", "label": "Марка по водонепроницаемости"}
+  ]
+}

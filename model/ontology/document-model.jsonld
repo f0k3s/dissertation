@@ -1,0 +1,16 @@
+{
+  "@context": "./core.jsonld",
+  "@graph": [
+    {"@id": "https://example.org/construction-norms/document/NormativeDocument", "@type": "rdfs:Class", "subClassOf": "ns:NormativeDocument", "label": "Нормативный документ"},
+    {"@id": "https://example.org/construction-norms/document/DocumentFragment", "@type": "rdfs:Class", "subClassOf": "ns:DocumentFragment", "label": "Фрагмент нормативного документа"},
+    {"@id": "https://example.org/construction-norms/document/DocumentConcept", "@type": "rdfs:Class", "subClassOf": "ns:DocumentConcept", "label": "Термин или концепт документа"},
+    {"@id": "https://example.org/construction-norms/document/hasFragment", "@type": "rdf:Property", "label": "имеет фрагмент", "domain": "ns:NormativeDocument", "range": "ns:DocumentFragment"},
+    {"@id": "https://example.org/construction-norms/document/hasConcept", "@type": "rdf:Property", "label": "имеет концепт", "domain": "ns:NormativeDocument", "range": "ns:DocumentConcept"},
+    {"@id": "https://example.org/construction-norms/document/hasRequirement", "@type": "rdf:Property", "label": "имеет требование", "domain": "ns:NormativeDocument", "range": "ns:Requirement"},
+    {"@id": "https://example.org/construction-norms/document/fragmentType", "@type": "rdf:Property", "label": "тип фрагмента", "domain": "ns:DocumentFragment", "range": "ns:EnumeratedValue"},
+    {"@id": "https://example.org/construction-norms/document/clauseNumber", "@type": "rdf:Property", "label": "номер пункта", "domain": "ns:DocumentFragment"},
+    {"@id": "https://example.org/construction-norms/document/tableNumber", "@type": "rdf:Property", "label": "номер таблицы", "domain": "ns:DocumentFragment"},
+    {"@id": "https://example.org/construction-norms/document/pageStart", "@type": "rdf:Property", "label": "начальная страница", "domain": "ns:DocumentFragment"},
+    {"@id": "https://example.org/construction-norms/document/pageEnd", "@type": "rdf:Property", "label": "конечная страница", "domain": "ns:DocumentFragment"}
+  ]
+}

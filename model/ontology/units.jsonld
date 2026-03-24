@@ -1,0 +1,12 @@
+{
+  "@context": "./core.jsonld",
+  "@graph": [
+    {"@id": "https://example.org/construction-norms/unit/mm", "@type": "ns:Unit", "label": "миллиметр", "symbol": "mm"},
+    {"@id": "https://example.org/construction-norms/unit/m", "@type": "ns:Unit", "label": "метр", "symbol": "m"},
+    {"@id": "https://example.org/construction-norms/unit/kg", "@type": "ns:Unit", "label": "килограмм", "symbol": "kg"},
+    {"@id": "https://example.org/construction-norms/unit/kg_m3", "@type": "ns:Unit", "label": "килограмм на кубический метр", "symbol": "kg/m3"},
+    {"@id": "https://example.org/construction-norms/unit/percent", "@type": "ns:Unit", "label": "процент", "symbol": "%"},
+    {"@id": "https://example.org/construction-norms/unit/degC", "@type": "ns:Unit", "label": "градус Цельсия", "symbol": "degC"},
+    {"@id": "https://example.org/construction-norms/unit/piece", "@type": "ns:Unit", "label": "штука", "symbol": "pcs"}
+  ]
+}

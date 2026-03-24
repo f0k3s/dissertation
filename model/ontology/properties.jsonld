@@ -1,0 +1,24 @@
+{
+  "@context": "./core.jsonld",
+  "@graph": [
+    {"@id": "https://example.org/construction-norms/property/Length", "@type": "ns:PropertyType", "label": "Длина", "hasUnit": "https://example.org/construction-norms/unit/mm"},
+    {"@id": "https://example.org/construction-norms/property/Width", "@type": "ns:PropertyType", "label": "Ширина", "hasUnit": "https://example.org/construction-norms/unit/mm"},
+    {"@id": "https://example.org/construction-norms/property/Height", "@type": "ns:PropertyType", "label": "Высота", "hasUnit": "https://example.org/construction-norms/unit/mm"},
+    {"@id": "https://example.org/construction-norms/property/CutoutSize", "@type": "ns:PropertyType", "label": "Размер выреза", "hasUnit": "https://example.org/construction-norms/unit/mm"},
+    {"@id": "https://example.org/construction-norms/property/DeviationFromStraightness", "@type": "ns:PropertyType", "label": "Отклонение от прямолинейности", "hasUnit": "https://example.org/construction-norms/unit/mm"},
+    {"@id": "https://example.org/construction-norms/property/CompressiveStrengthClass", "@type": "ns:PropertyType", "label": "Класс бетона по прочности на сжатие", "hasEnumeration": "https://example.org/construction-norms/enum/StrengthClass"},
+    {"@id": "https://example.org/construction-norms/property/ReleaseStrengthPercent", "@type": "ns:PropertyType", "label": "Нормируемая отпускная прочность", "hasUnit": "https://example.org/construction-norms/unit/percent"},
+    {"@id": "https://example.org/construction-norms/property/FrostResistance", "@type": "ns:PropertyType", "label": "Марка по морозостойкости", "hasEnumeration": "https://example.org/construction-norms/enum/FrostResistanceGrade"},
+    {"@id": "https://example.org/construction-norms/property/WaterResistance", "@type": "ns:PropertyType", "label": "Марка по водонепроницаемости", "hasEnumeration": "https://example.org/construction-norms/enum/WaterResistanceGrade"},
+    {"@id": "https://example.org/construction-norms/property/WaterAbsorption", "@type": "ns:PropertyType", "label": "Водопоглощение", "hasUnit": "https://example.org/construction-norms/unit/percent"},
+    {"@id": "https://example.org/construction-norms/property/MoistureContent", "@type": "ns:PropertyType", "label": "Влажность", "hasUnit": "https://example.org/construction-norms/unit/percent"},
+    {"@id": "https://example.org/construction-norms/property/Density", "@type": "ns:PropertyType", "label": "Средняя плотность", "hasUnit": "https://example.org/construction-norms/unit/kg_m3"},
+    {"@id": "https://example.org/construction-norms/property/TechnologicalCrackWidth", "@type": "ns:PropertyType", "label": "Ширина раскрытия технологических трещин", "hasUnit": "https://example.org/construction-norms/unit/mm"},
+    {"@id": "https://example.org/construction-norms/property/SurfaceCategory", "@type": "ns:PropertyType", "label": "Категория бетонной поверхности", "hasEnumeration": "https://example.org/construction-norms/enum/SurfaceCategory"},
+    {"@id": "https://example.org/construction-norms/property/MountingLoopType", "@type": "ns:PropertyType", "label": "Тип монтажной петли", "hasEnumeration": "https://example.org/construction-norms/enum/MountingLoopType"},
+    {"@id": "https://example.org/construction-norms/property/ReinforcementSteelClass", "@type": "ns:PropertyType", "label": "Класс арматуры", "hasEnumeration": "https://example.org/construction-norms/enum/ReinforcementClass"},
+    {"@id": "https://example.org/construction-norms/property/MarkingCode", "@type": "ns:PropertyType", "label": "Код маркировки"},
+    {"@id": "https://example.org/construction-norms/property/StackHeight", "@type": "ns:PropertyType", "label": "Высота штабеля", "hasUnit": "https://example.org/construction-norms/unit/m"},
+    {"@id": "https://example.org/construction-norms/property/SpacerThickness", "@type": "ns:PropertyType", "label": "Толщина прокладок", "hasUnit": "https://example.org/construction-norms/unit/mm"}
+  ]
+}

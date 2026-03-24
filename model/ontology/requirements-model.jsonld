@@ -1,0 +1,26 @@
+{
+  "@context": "./core.jsonld",
+  "@graph": [
+    {"@id": "https://example.org/construction-norms/requirements/Requirement", "@type": "rdfs:Class", "subClassOf": "ns:Requirement", "label": "Нормативное требование"},
+    {"@id": "https://example.org/construction-norms/requirements/Condition", "@type": "rdfs:Class", "subClassOf": "ns:Condition", "label": "Условие применимости"},
+    {"@id": "https://example.org/construction-norms/requirements/Exception", "@type": "rdfs:Class", "subClassOf": "ns:Exception", "label": "Исключение"},
+    {"@id": "https://example.org/construction-norms/requirements/TestMethod", "@type": "rdfs:Class", "subClassOf": "ns:TestMethod", "label": "Метод контроля или испытания"},
+
+    {"@id": "https://example.org/construction-norms/requirements/CompressiveStrengthTest", "@type": "ns:TestMethod", "label": "Определение прочности на сжатие"},
+    {"@id": "https://example.org/construction-norms/requirements/FrostResistanceTest", "@type": "ns:TestMethod", "label": "Определение морозостойкости"},
+    {"@id": "https://example.org/construction-norms/requirements/WaterResistanceTest", "@type": "ns:TestMethod", "label": "Определение водонепроницаемости"},
+    {"@id": "https://example.org/construction-norms/requirements/WaterAbsorptionTest", "@type": "ns:TestMethod", "label": "Определение водопоглощения"},
+    {"@id": "https://example.org/construction-norms/requirements/MoistureTest", "@type": "ns:TestMethod", "label": "Определение влажности"},
+    {"@id": "https://example.org/construction-norms/requirements/GeometryMeasurement", "@type": "ns:TestMethod", "label": "Измерение геометрических параметров"},
+
+    {"@id": "https://example.org/construction-norms/requirements/Condition/AggressiveEnvironment", "@type": "ns:Condition", "label": "эксплуатация в агрессивной среде"},
+    {"@id": "https://example.org/construction-norms/requirements/Condition/ProjectSpecified", "@type": "ns:Condition", "label": "показатель задан в проекте или заказе"},
+    {"@id": "https://example.org/construction-norms/requirements/Condition/BelowMinus40", "@type": "ns:Condition", "label": "подъем и монтаж при температуре ниже минус 40 degC"},
+    {"@id": "https://example.org/construction-norms/requirements/Condition/WithoutMountingLoopsAllowed", "@type": "ns:Condition", "label": "применяются специальные захватные устройства и есть согласование"},
+
+    {"@id": "https://example.org/construction-norms/requirements/template/StrengthRequirement", "@type": "ns:Requirement", "label": "Шаблон требования к прочности", "aboutProperty": "https://example.org/construction-norms/property/CompressiveStrengthClass", "hasOperator": "https://example.org/construction-norms/enum/Operator/gte", "hasNormativeForce": "https://example.org/construction-norms/enum/NormativeForce/mandatory"},
+    {"@id": "https://example.org/construction-norms/requirements/template/GeometryToleranceRequirement", "@type": "ns:Requirement", "label": "Шаблон требования к геометрическому допуску", "hasNormativeForce": "https://example.org/construction-norms/enum/NormativeForce/mandatory", "verifiedBy": "https://example.org/construction-norms/requirements/GeometryMeasurement"},
+    {"@id": "https://example.org/construction-norms/requirements/template/MarkingRequirement", "@type": "ns:Requirement", "label": "Шаблон требования к маркировке", "hasNormativeForce": "https://example.org/construction-norms/enum/NormativeForce/mandatory"},
+    {"@id": "https://example.org/construction-norms/requirements/template/StorageRequirement", "@type": "ns:Requirement", "label": "Шаблон требования к хранению и транспортированию", "hasNormativeForce": "https://example.org/construction-norms/enum/NormativeForce/mandatory"}
+  ]
+}
